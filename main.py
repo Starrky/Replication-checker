@@ -12,6 +12,7 @@ from xlsxwriter.utility import xl_rowcol_to_cell
 import os
 import subprocess
 
+
 start_time = time()
 cwd = os.getcwd()
 results_dir = f'{cwd}\\Results'
@@ -120,11 +121,12 @@ worksheet1.set_column('A:A', 12, format1)
 worksheet1.set_column('B:B', 15, format1)
 worksheet1.set_column('C:C', 10, format1)
 worksheet1.set_column('D:D', 18, format1)
-worksheet1.set_column('E:E', 12, format1)
+worksheet1.set_column('E:E', 15, format1)
 
 workbook.close()
 
-dest = "C:\\Users\\jmazurek\\PEPCO\\SOC - General\\Replikacja\\"
+username = os.getlogin()
+dest = f"C:\\Users\\{username}\\PEPCO\\SOC - General\\Replikacja\\"
 shutil.copy(Final_excel, dest)
 
 print("Process finished --- %s seconds ---" % (time() - start_time))

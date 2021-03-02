@@ -20,4 +20,4 @@ Sqlcmd -i "%CD%\SQL\Repl-RS.sql" -S "TP-IN-CDB04" -v DB="TP-IN-CDB04" -o "%CD%\R
 Sqlcmd -i "%CD%\SQL\Repl-RO.sql" -S "TP-RO-CDB01" -v DB="TP-RO-CDB01" -o "%CD%\Results\csv\Result_RO1.csv" -s ";"
 Sqlcmd -i "%CD%\SQL\Repl-RO.sql" -S "TP-RO-CDB02" -v DB="TP-RO-CDB02" -o "%CD%\Results\csv\Result_RO2.csv" -s ";"
  
-C:\Coding\Repos\Replication\venv\Scripts\python.exe main.py
+%CD%\venv\Scripts\python.exe main.py
